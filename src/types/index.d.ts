@@ -1,0 +1,1 @@
+declare function calculate(): void
