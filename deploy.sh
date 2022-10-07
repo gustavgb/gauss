@@ -1,6 +1,9 @@
 #!/bin/bash
 
 npm run build
-git add ./dist
+rm -rf docs
+mkdir docs
+cp -r ./dist/* ./docs
+git add ./docs
 git commit -m "Deploy to gh-pages"
-git subtree push --prefix dist git@github.com:gustavgb/gauss.git gh-pages
+git push
